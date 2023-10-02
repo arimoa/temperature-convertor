@@ -1,14 +1,14 @@
-var inputElement = document.getElementsByClassName("input-section");
-var celsiusInput = document.getElementsByClassName("celsius");
-var farenheitInput = document.getElementsByClassName("farenheit");
-var kelvinInput = document.getElementsByClassName("kelvin");
-var celsius;
-var farenheit = 1.8 * celsius + 32;
-var kelvin = celsius + 273.15;
+const inputElement = document.getElementsByClassName("input-section");
+const celsiusInput = document.getElementsByClassName("celsius");
+const farenheitInput = document.getElementsByClassName("farenheit");
+const kelvinInput = document.getElementsByClassName("kelvin");
+let celsius;
+let farenheit = 1.8 * celsius + 32;
+let kelvin = celsius + 273.15;
 
 for (let i = 0; i < inputElement.length; i++) {
   inputElement[i].addEventListener("change", (e) => {
-    var userInput = parseFloat(e.target.value);
+    let userInput = parseFloat(e.target.value);
 
     if (e.target.classList.contains("celsius")) {
       celsius = userInput;
